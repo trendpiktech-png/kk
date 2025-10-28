@@ -1,0 +1,8 @@
+{
+  "name": "numcount-mockups-vercel-deploy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sed -i 's|__API_KEY__|'\"$API_KEY\"'|g' index.tsx"
+  }
+}
