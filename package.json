@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "sed -i 's|__API_KEY__|'\"$API_KEY\"'|g' index.tsx"
+    "build": "mkdir public && cp index.html index.css index.tsx manifest.json sw.js key-generator.html key-generator.js public/ && (cp *.png public/ 2>/dev/null || true) && (cp *.ico public/ 2>/dev/null || true) && sed -i 's|__API_KEY__|'\"$API_KEY\"'|g' public/index.tsx"
   }
 }
